@@ -3,6 +3,7 @@ Introduction
 
 GeoCLEWs offers an extensive set of beneficial features for developers and users to process high-resolution land and water data for Climate, Land, Energy, and Water systems modelling (CLEWs). This script automatically collects data from  GAEZ v4 (Global Agro-Ecological Zones version 4) and FAOSTAT (Food and Agriculture Organization of the United Nations). GeoCLEWs performs processing and calibration of agro-climatic potential yield, crop water deficit, crop evapotranspiration, precipitation, and land cover. Outputs can be efficiently combined with additional data for CLEWs modelling, such as electricity information, to create a detailed CLEWs model without implementing complicated and time-consuming spatial processing. Jupiter Notebook code provides a comprehensive and detailed explanation of the processing steps involved.
 
+Note: GeoCLEWs has been successfully tested and verified on Windows machines. However, there may be incompatibility issues with other operating systems due to differences in Python packages or their versions. 
 
 
 Creating and Activating the Environment
