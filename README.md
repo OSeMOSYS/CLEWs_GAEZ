@@ -23,8 +23,8 @@ Release Notes
 ### Version 2.0.0 (July 2024):
 
 - **Spatial Clustering**: Implements spatial clustering to capture cross-regional interdependencies and reduce computational complexity.
-- **Optimum Clusters Identification**: Generates dendrograms and elbow graphs to identify the optimal number of spatial clusters.
-- **Cluster Classification**: Classifies regions into clusters based on agro-climatic potential yield patterns and soil suitability across regions.
+- **Optimal Clusters Identification**: Generates dendrograms and elbow graphs to identify the optimal number of spatial clusters.
+- **Cluster Classification**: Classifies regions into clusters based on agro-climatic potential yield patterns and soil suitability.
 - **CLEWs-Compatible Outputs**: Generates CSV files for individual clusters in each region, providing statistics on land cover, precipitation, crop potential yield, water deficit, and evapotranspiration.
 
 
