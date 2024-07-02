@@ -12,7 +12,7 @@ GeoCLEWs performs processing and calibration of agro-climatic potential yield, c
 
 Note: GeoCLEWs has been successfully tested and verified on Windows machines. However, there may be incompatibility issues with other operating systems due to differences in Python packages or their versions. 
 
-Authors:
+Contributors:
 ------------------------------------------------
 **[Yalda Saedi](https://github.com/Ysaedi)** - Developer<br />
 **[Taco Niet](https://github.com/tniet)** - Supervisor<br />
