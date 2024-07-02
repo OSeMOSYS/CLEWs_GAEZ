@@ -1,10 +1,34 @@
 Introduction
 =====================================
 
-GeoCLEWs offers an extensive set of beneficial features for developers and users to process high-resolution land and water data for Climate, Land, Energy, and Water systems modelling (CLEWs). This script automatically collects data from  GAEZ v4 (Global Agro-Ecological Zones version 4) and FAOSTAT (Food and Agriculture Organization of the United Nations). GeoCLEWs performs processing and calibration of agro-climatic potential yield, crop water deficit, crop evapotranspiration, precipitation, and land cover. Outputs can be efficiently combined with additional data for CLEWs modelling, such as electricity information, to create a detailed CLEWs model without implementing complicated and time-consuming spatial processing. Jupiter Notebook code provides a comprehensive and detailed explanation of the processing steps involved.
+GeoCLEWs offers an extensive set of beneficial features for developers and users to process high-resolution land and water data for Climate, Land, Energy, and Water systems (CLEWs) modelling. This tool provides:
+- Detailed representation of land and water systems using high-resolution Global Agro-Ecological Zones ([GAEZ v4](https://gaez.fao.org/)) datasets and Food and Agriculture Organization of the United Nations (FAOSTAT), facilitating the development of CLEWs models in a clewsy-compatible format.
+- Implementation of customized geographical aggregation and Agglomerative Hierarchical clustering to capture cross-regional interdependencies and streamline computational complexity.
+- Automation of data collection, preparation, processing, and result generation across arbitrary geographical regions, reducing manual effort and minimizing errors in WEF assessments.
+- Integration of agro-climatic data for additional crops and scalability in aggregating administrative regions.
+- Promotion of sustainable collaboration through the use of open-source tools and datasets. GeoCLEWs is openly licensed under the MIT License, providing transparent, self-descriptive, and reproducible scripts and essential supplementary documents to encourage user contributions.
+
+GeoCLEWs performs processing and calibration of agro-climatic potential yield, crop water deficit, crop evapotranspiration, precipitation, and land cover. Outputs can be efficiently combined with additional data for CLEWs modelling, such as electricity information, to create a detailed CLEWs model without implementing complicated and time-consuming spatial processing. Jupiter Notebook code provides a comprehensive and detailed explanation of the processing steps involved.
 
 Note: GeoCLEWs has been successfully tested and verified on Windows machines. However, there may be incompatibility issues with other operating systems due to differences in Python packages or their versions. 
 
+Release Notes
+------------------------------------------------
+### Version 2.0.0 (July 2024):
+
+- **Spatial Clustering**: Implements spatial clustering to capture cross-regional interdependencies and reduce computational complexity.
+- **Optimum Clusters Identification**: Generates dendrograms and elbow graphs to identify the optimal number of spatial clusters.
+- **Cluster Classification**: Classifies regions into clusters based on agro-climatic potential yield patterns and soil uitability across regions.
+- **CLEWs-Compatible Outputs**: Generates CSV files for individual clusters in each region, providing statistics on land cover, precipitation, crop potential yield, water deficit, and evapotranspiration.
+
+
+### Version 1.0.0 (December 2023):
+- **Crop Identification**: Identifies primary crops using FAOSTAT data, including agro-ecological stats for five additional crops.
+- **GAEZ Data Collection**: Automates data extraction and preprocessing from GAEZ datasets.
+- **Land Cell Generation**: Generates georeferenced land cells adaptable to any geographical boundary.
+- **High Resolution Attributes Extraction**: Integrates agro-ecological attributes into land cells.
+- **Geographical Aggregation**: Aggregates administrative regions to reduce CLEWs modeling computation.
+- **CLEWs-Compatible Outputs**: Provides tabular outputs and interactive graphs.
 
 Creating and Activating the Environment
 ------------------------------------------------
