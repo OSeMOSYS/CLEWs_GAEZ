@@ -14,6 +14,7 @@ Note: GeoCLEWs has been successfully tested and verified on Windows machines. Ho
 
 Contributors:
 ------------------------------------------------
+**[Junoh Bede](https://github.com/junohBede)** - Developer<br />
 **[Yalda Saedi](https://github.com/Ysaedi)** - Developer<br />
 **[Taco Niet](https://github.com/tniet)** - Supervisor<br />
 
