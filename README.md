@@ -63,9 +63,8 @@ Note: Two datasets (two collections of shapefiles including "..._ adm0" and “�
 Run the Workflow
 ---------------------------------------------------
 1. Python in terminal:
-   While in subfolder ‘GAEZ_Processing’ run the workflow with Python
-       ```python main.py
-       ```
+   While in subfolder ‘GAEZ_Processing’ run the workflow with Python 
+> python main.py
 2. Jupyter Notebook:
    Use `GeoCLEWs_v2.1.0.ipynb` file.
    
