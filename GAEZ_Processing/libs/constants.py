@@ -1,5 +1,5 @@
-import os
-ROOT_DIR = os.path.abspath(os.curdir)
+from pathlib import Path
+ROOT_DIR = Path(__file__).parent.parent
 GLOBAL_RASTER_PATH = f"{ROOT_DIR}/Data/interim_output/global_raster_input"
 CROPPED_RASTER_PATH = f"{ROOT_DIR}/Data/interim_output/cropped_raster_input"
 INPUT_DATA_PATH = f"{ROOT_DIR}/Data/input"
