@@ -11,13 +11,13 @@ from libs.process_land_cells import read_shapefiles, generate_georeference, conv
 from libs.extract_geospatial_attributes import clip_raster_file, extract_raster_values, collect_raster_files
 from libs.spatial_clustering import prepare_data_for_clustering
 from libs.calculation_cluster import calculate
-from libs.constants import GLOBAL_RASTER_PATH, CROPPED_RASTER_PATH, OUTPUT_DATA_PATH, INTERIM_DATA_PATH, USER_INPUTS_PATH
+from libs.constants import ROOT_DIR, GLOBAL_RASTER_PATH, CROPPED_RASTER_PATH, OUTPUT_DATA_PATH, USER_INPUTS_PATH
 
 
 def initialize_directories(input_data):
     scenario = input_data["scenario"]
     do = f"{OUTPUT_DATA_PATH}/{scenario}/"
-    paths = ['Data/interim_output', GLOBAL_RASTER_PATH, CROPPED_RASTER_PATH, do, f'{do}summary_stats',
+    paths = [f'{ROOT_DIR}/Data/interim_output', GLOBAL_RASTER_PATH, CROPPED_RASTER_PATH, do, f'{do}summary_stats',
              f"{do}dendrogram_graph", f'{do}elbow_graph', f'{do}spatial_clustering']
     # Initialize output paths for data
     for output_path_raw in paths:
@@ -36,7 +36,7 @@ def main():
         input_data = yaml.load(f, Loader=yaml.FullLoader)
     # 3-letter ISO code of the selected country
     code = pd.read_csv(
-        'Data/Country_code.csv')  # More info: https://www.nationsonline.org/oneworld/country_code_list.htm
+        f'{ROOT_DIR}/Data/Country_code.csv')  # More info: https://www.nationsonline.org/oneworld/country_code_list.htm
     code_name = code[code['Full_name'] == input_data['geographic_scope']]
     input_data['country_name'] = code_name.iloc[0]['country_code']
 
