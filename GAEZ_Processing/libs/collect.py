@@ -5,13 +5,13 @@ import pandas as pd
 import requests
 import os
 import shutil as sh
-from libs.constants import GLOBAL_RASTER_PATH, INPUT_DATA_PATH, INTERIM_DATA_PATH
+from libs.constants import ROOT_DIR, GLOBAL_RASTER_PATH, INPUT_DATA_PATH, INTERIM_DATA_PATH
 
 
 def retrieve_top_10_crops(input_data):
     country_full_name = input_data["geographic_scope"]
     # Read the FAOSTAT file
-    data = pd.read_csv('./Data/FAOSTAT_2020.csv')
+    data = pd.read_csv(f'{ROOT_DIR}/Data/FAOSTAT_2020.csv')
     filtered_data = data[data['Area'] == country_full_name]
 
     # Sorting based on the harvested area in descending order and get top 10 rows
@@ -28,7 +28,7 @@ def retrieve_top_10_crops(input_data):
 
 
 def standardize_faostat(main_crops, other_crops):
-    crop_code = pd.read_csv('./Data/Crop_code.csv')
+    crop_code = pd.read_csv(f'{ROOT_DIR}/Data/Crop_code.csv')
     # FAO correction: 3 letter naming convention per crop considering CLEWs naming format
     crop_name = []
     for item in main_crops:
