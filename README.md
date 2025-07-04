@@ -72,7 +72,3 @@ Outputs
 ---------------------------------------------------
 GeoCLEWs code produces tabular results in a CSV format which is compatible with clewsy for CLEWs modelling, along with interactive graphs. The GAEZ portal provides continuous raster data representing crop yields in kg DW/ha and crop water deficit, precipitation, and crop evapotranspiration in millimeter. Units presented in this analysis are recalculated based on the CLEWs framework, and therefore, the million tonnes per 1000 km² unit of measurement is used to quantify agro-climatic potential yield. Crop water deficit, crop evapotranspiration, and precipitation are calculated in BCM (billion cubic meters) per 1000 km². These units have been chosen to ensure consistency with the CLEWs methodology and facilitate comparability with other studies. The output of categorical land cover raster data is summarized in units of square kilometers. 
 
-Contact
------------------------------------------
-For any inquiries, please contact [Yalda Saedi](https://www.linkedin.com/in/yalda-saedi/).
-
