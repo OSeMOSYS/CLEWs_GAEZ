@@ -9,7 +9,7 @@ from libs.constants import ROOT_DIR, GLOBAL_RASTER_PATH, INPUT_DATA_PATH, INTERI
 
 
 def retrieve_top_10_crops(input_data):
-    country_full_name = input_data["geographic_scope"]
+    country_full_name = input_data["country_full_name"]
     # Read the FAOSTAT file
     data = pd.read_csv(f'{ROOT_DIR}/Data/FAOSTAT_2020.csv')
     filtered_data = data[data['Area'] == country_full_name]
