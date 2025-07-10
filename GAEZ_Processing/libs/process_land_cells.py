@@ -66,7 +66,7 @@ def convert_points_to_polygons(shapefile, clustered_gdf, input_data):
 
     # Reset the index of the left dataframe
     clustered_gdf = clustered_gdf.reset_index(drop=True)
-    admin_name = "NAME_" + str(admin_level)
+    admin_name = f"HASC_{admin_level}"
 
     if admin_level == 0:
         # Perform the spatial join
@@ -87,7 +87,7 @@ def convert_points_to_polygons(shapefile, clustered_gdf, input_data):
     print(clustered_gdf.head(3))
 
     # create a new column based on first 3 letters of the 'cluster' column
-    clustered_gdf['new_cluster'] = clustered_gdf['cluster'].apply(lambda x: x[:3]).str.upper()
+    clustered_gdf['new_cluster'] = clustered_gdf['cluster'].apply(lambda x: x.replace('.', '_'))
     clustered_gdf = clustered_gdf.rename(columns={'cluster': 'old_cluster'})
     clustered_gdf = clustered_gdf.rename(columns={'new_cluster': 'cluster'})
     clustered_gdf = clustered_gdf.drop(columns=['old_cluster'])
