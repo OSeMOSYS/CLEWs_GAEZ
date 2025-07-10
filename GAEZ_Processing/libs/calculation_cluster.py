@@ -111,7 +111,7 @@ def calculate(land_cells, other_crop_name, regions_info, input_data):
         clusters_lc = clusters[land_cover_cols].sum().merge(clusters["sqkm"].sum().reset_index(name="sqkm"),
                                                            on="clusters_yield").round(decimals=1)
         clusters_lc = clusters_lc.sort_values(ascending=True, by='clusters_yield').reset_index(drop=True)
-        name = key
+        name = key.split("_")[-1]
 
         # Export land cover stats to csv
         clusters_lc.to_csv(os.path.join(summary_stats_path, "{}_LandCover_byCluster_summary.csv".format(name)),
@@ -140,7 +140,7 @@ def calculate(land_cells, other_crop_name, regions_info, input_data):
         additional_stat_group('cwd')
         additional_stat_group('evt')
 
-        name = key
+        name = key.split("_")[-1]
 
         print('#### Cluster summary statistics for other variables in {}'.format(name))
         print(clusters_stat)
@@ -150,7 +150,7 @@ def calculate(land_cells, other_crop_name, regions_info, input_data):
     for key, gdf in group_stat.items():
         clusters_other = gdf
 
-        name = key
+        name = key.split("_")[-1]
 
         # generating the crop potential yeild csv files
         yld_columns = [col for col in clusters_other.columns if 'yld' in col]
