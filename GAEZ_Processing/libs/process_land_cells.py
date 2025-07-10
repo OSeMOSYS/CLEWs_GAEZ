@@ -87,7 +87,7 @@ def convert_points_to_polygons(shapefile, clustered_gdf, input_data):
     print(clustered_gdf.head(3))
 
     # create a new column based on first 3 letters of the 'cluster' column
-    clustered_gdf['new_cluster'] = clustered_gdf['cluster'].apply(lambda x: x.replace('.', '_'))
+    clustered_gdf['new_cluster'] = clustered_gdf['cluster'].apply(lambda x: x.replace('.', '-'))
     clustered_gdf = clustered_gdf.rename(columns={'cluster': 'old_cluster'})
     clustered_gdf = clustered_gdf.rename(columns={'new_cluster': 'cluster'})
     clustered_gdf = clustered_gdf.drop(columns=['old_cluster'])
