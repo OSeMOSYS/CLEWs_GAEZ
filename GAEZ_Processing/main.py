@@ -36,9 +36,8 @@ def main():
         input_data = yaml.load(f, Loader=yaml.FullLoader)
     # 3-letter ISO code of the selected country
     code = pd.read_csv(
-        f'{ROOT_DIR}/Data/Country_code.csv')  # More info: https://www.nationsonline.org/oneworld/country_code_list.htm
-    code_name = code[code['Full_name'] == input_data['country_full_name']]
-    input_data['country_name'] = code_name.iloc[0]['country_code']
+        f'{ROOT_DIR}/Data/Country_code.csv').set_index("Full_name").to_dict()  # More info: https://www.nationsonline.org/oneworld/country_code_list.htm
+    input_data['country_name'] = code['country_code'][input_data['country_full_name']]
 
     # execute functions
     initialize_directories(input_data)

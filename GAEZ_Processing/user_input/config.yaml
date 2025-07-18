@@ -2,7 +2,7 @@
 scenario: "Guyana"
 
 # Country Code (Three letters)
-geographic_scope: "Guyana"
+country_full_name: "Guyana"
 
 # Choose your preferred RCP (Representative Concentration Pathway) from the available options: RCP2.6, RCP4.5, RCP6.0, RCP8.5.
 rcp: "RCP4.5"
