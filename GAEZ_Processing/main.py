@@ -37,7 +37,7 @@ def main():
     # 3-letter ISO code of the selected country
     code = pd.read_csv(
         f'{ROOT_DIR}/Data/Country_code.csv')  # More info: https://www.nationsonline.org/oneworld/country_code_list.htm
-    code_name = code[code['Full_name'] == input_data['geographic_scope']]
+    code_name = code[code['Full_name'] == input_data['country_full_name']]
     input_data['country_name'] = code_name.iloc[0]['country_code']
 
     # execute functions
