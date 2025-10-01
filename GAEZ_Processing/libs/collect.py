@@ -114,6 +114,6 @@ def process_gaez_data(crop_name, other_crop_name, crop_code, input_data):
         download_url(other_high, "Download URL", GLOBAL_RASTER_PATH)
         download_url(main_low, "Download URL", GLOBAL_RASTER_PATH)
         download_url(other_low, "Download URL", GLOBAL_RASTER_PATH)
-    sh.copy(f'{INPUT_DATA_PATH}/precipitation prc.tif', f'{GLOBAL_RASTER_PATH}/precipitation prc.tif')
-    sh.copy(f'{INPUT_DATA_PATH}/LCType_ncb.tif', f'{GLOBAL_RASTER_PATH}/LCType_ncb.tif')
+    sh.copy2(f'{INPUT_DATA_PATH}/precipitation prc.tif', f'{GLOBAL_RASTER_PATH}/precipitation prc.tif')
+    sh.copy2(f'{INPUT_DATA_PATH}/LCType_ncb.tif', f'{GLOBAL_RASTER_PATH}/LCType_ncb.tif')
 
