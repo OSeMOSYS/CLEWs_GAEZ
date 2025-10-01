@@ -4,7 +4,7 @@
 import pandas as pd
 import requests
 import os
-import shutil as sh
+import shutil
 from libs.constants import ROOT_DIR, GLOBAL_RASTER_PATH, INPUT_DATA_PATH, INTERIM_DATA_PATH
 
 
@@ -115,12 +115,12 @@ def process_gaez_data(crop_name, other_crop_name, crop_code, input_data):
         download_url(main_low, "Download URL", GLOBAL_RASTER_PATH)
         download_url(other_low, "Download URL", GLOBAL_RASTER_PATH)
     try:
-        sh.copyfile(f'{INPUT_DATA_PATH}/precipitation prc.tif', f'{GLOBAL_RASTER_PATH}/precipitation prc.tif')
-        sh.copyfile(f'{INPUT_DATA_PATH}/LCType_ncb.tif', f'{GLOBAL_RASTER_PATH}/LCType_ncb.tif')
-    except sh.SameFileError:
+        shutil.copyfile(f'{INPUT_DATA_PATH}/precipitation prc.tif', f'{GLOBAL_RASTER_PATH}/precipitation prc.tif')
+        shutil.copyfile(f'{INPUT_DATA_PATH}/LCType_ncb.tif', f'{GLOBAL_RASTER_PATH}/LCType_ncb.tif')
+    except shutil.SameFileError:
         os.system(f'rm -f {GLOBAL_RASTER_PATH}/precipitation prc.tif')
         os.system(f'rm -f {GLOBAL_RASTER_PATH}/LCType_ncb.tif')
-        sh.copyfile(f'{INPUT_DATA_PATH}/precipitation prc.tif', f'{GLOBAL_RASTER_PATH}/precipitation prc.tif')
-        sh.copyfile(f'{INPUT_DATA_PATH}/LCType_ncb.tif', f'{GLOBAL_RASTER_PATH}/LCType_ncb.tif')
+        shutil.copyfile(f'{INPUT_DATA_PATH}/precipitation prc.tif', f'{GLOBAL_RASTER_PATH}/precipitation prc.tif')
+        shutil.copyfile(f'{INPUT_DATA_PATH}/LCType_ncb.tif', f'{GLOBAL_RASTER_PATH}/LCType_ncb.tif')
 
 
