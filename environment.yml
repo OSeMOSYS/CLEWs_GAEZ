@@ -7,6 +7,4 @@ dependencies:
   - requests
   - geopandas>=1.0.1
   - jupyter
-  - pip:
-    - rasterio
   - rasterstats>=0.20.0
