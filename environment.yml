@@ -9,3 +9,4 @@ dependencies:
   - jupyter
   - pip:
     - rasterio
+  - rasterstats>=0.20.0
