@@ -14,6 +14,7 @@ Note: GeoCLEWs has been successfully tested and verified on Windows machines. Ho
 
 Contributors:
 ------------------------------------------------
+**[Junoh Bede](https://github.com/junohBede)** - Developer<br />
 **[Yalda Saedi](https://github.com/Ysaedi)** - Developer<br />
 **[Taco Niet](https://github.com/tniet)** - Supervisor<br />
 
@@ -59,11 +60,15 @@ Please make sure that all required files, such as .shx, .shp, and others, are in
 
 Note: Two datasets (two collections of shapefiles including "..._ adm0" and “…_data”) corresponding to the selected country need to be downloaded and placed inside the 'Data/input' folder. If processing at administrative level 0, the same dataset with different naming formats should be used and placed together in the same directory.
 
+Run the Workflow
+---------------------------------------------------
+1. Python in terminal:
+   While in subfolder ‘GAEZ_Processing’ run the workflow with Python 
+> python main.py
+2. Jupyter Notebook:
+   Use `GeoCLEWs_v2.1.0.ipynb` file.
+   
 Outputs
 ---------------------------------------------------
 GeoCLEWs code produces tabular results in a CSV format which is compatible with clewsy for CLEWs modelling, along with interactive graphs. The GAEZ portal provides continuous raster data representing crop yields in kg DW/ha and crop water deficit, precipitation, and crop evapotranspiration in millimeter. Units presented in this analysis are recalculated based on the CLEWs framework, and therefore, the million tonnes per 1000 km² unit of measurement is used to quantify agro-climatic potential yield. Crop water deficit, crop evapotranspiration, and precipitation are calculated in BCM (billion cubic meters) per 1000 km². These units have been chosen to ensure consistency with the CLEWs methodology and facilitate comparability with other studies. The output of categorical land cover raster data is summarized in units of square kilometers. 
-
-Contact
------------------------------------------
-For any inquiries, please contact [Yalda Saedi](https://www.linkedin.com/in/yalda-saedi/).
 
