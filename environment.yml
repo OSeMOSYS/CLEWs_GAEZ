@@ -8,3 +8,4 @@ dependencies:
   - geopandas>=1.0.1
   - jupyter
   - rasterstats>=0.20.0
+  - libnetcdf<=4.8.1
