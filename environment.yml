@@ -8,3 +8,5 @@ dependencies:
   - geopandas>=1.0.1
   - rasterstats>=0.20.0
   - jupyter
+  - pip:
+    - rasterio
