@@ -2,7 +2,7 @@ Introduction
 =====================================
 
 GeoCLEWs offers an extensive set of beneficial features for developers and users to process high-resolution land and water data for Climate, Land, Energy, and Water systems (CLEWs) modelling. This tool provides:
-- Detailed representation of land and water systems using high-resolution Global Agro-Ecological Zones ([GAEZ v4](https://gaez.fao.org/)) datasets and Food and Agriculture Organization of the United Nations (FAOSTAT), facilitating the development of CLEWs models in a clewsy-compatible format.
+- Detailed representation of land and water systems using high-resolution Global Agro-Ecological Zones ([GAEZ v5](https://www.fao.org/gaez/en/)) datasets and Food and Agriculture Organization of the United Nations (FAOSTAT), facilitating the development of CLEWs models in a clewsy-compatible format.
 - Implementation of customized geographical aggregation and Agglomerative Hierarchical clustering to capture cross-regional interdependencies and streamline computational complexity.
 - Automation of data collection, preparation, processing, and result generation across arbitrary geographical regions, reducing manual effort and minimizing errors in WEF assessments.
 - Integration of agro-climatic data for additional crops and scalability in aggregating administrative regions.
@@ -16,9 +16,22 @@ Contributors:
 ------------------------------------------------
 **[Yalda Saedi](https://github.com/Ysaedi)** - Developer<br />
 **[Taco Niet](https://github.com/tniet)** - Supervisor<br />
+**[Camilla Lo Giudice](https://github.com/Camilogiu)** - Contributor (Version 3.0.0)<br />
 
 
 Release Notes
+------------------------------------------------
+### Version 3.0.0 (July 2026):
+
+The workflow builds on top of version 2.0.0 with the following additions/edits: 
+- **GAEZv5**: The workflow directly downloads GAEZ v5 data. The user is now free to choose among  historical, ssp126, ssp370, ssp585 scenarios. If historical is chosen, the only climate model is AGERA5. For all the other SSPs, the available climate models are: GFDL-ESM4, IPSL-CM6A-LR, MPI-ESM1-2-HR, MRI-ESM2-0, UKESM1-0-LL.
+- **Climate Change Scenarios**: The workflow is now aligned with the scenario framework adopted in the IPCC AR6. The SSP scenario framework combines socioeconomic pathways with radiative forcing trajectories.
+- **Environment**: Update project environment for Python 3.10 compatibility.
+- **CLEWs-Compatible input files**: Generates CSV files for each farming system (high rainfed, high irrigated, low rainfed and low irrigated) for easier implementation into CLEWs models. The files are saved into a new folder in Data/output/summary stats/CLEWs inputs. The unit of measure are clews-compatible as in version 2.0.0. The format is the following: 
+
+| CLUSTER | CROP | PRC | CWD | EVP | YIELD|
+| ------- | ---- | --- | ----| ----| ---- | 
+
 ------------------------------------------------
 ### Version 2.0.0 (July 2024):
 
@@ -44,6 +57,10 @@ To set up the environment, run the following command:
 
     conda env create -f environment.yml
     conda activate GeoCLEWs
+
+Test the repository
+------------------------------------------------
+The Data/input folder contains the shapefiles for Zambia required to run the GeoCLEWs v3 Jupyter notebook with the default settings.
 
 Download Files and Data
 --------------------------------------------------
