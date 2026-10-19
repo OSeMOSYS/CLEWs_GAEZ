@@ -17,7 +17,7 @@ from libs.constants import ROOT_DIR, GLOBAL_RASTER_PATH, CROPPED_RASTER_PATH, OU
 def initialize_directories(input_data):
     scenario = input_data["scenario"]
     do = f"{OUTPUT_DATA_PATH}/{scenario}/"
-    paths = [f'{ROOT_DIR}/Data/interim_output', GLOBAL_RASTER_PATH, CROPPED_RASTER_PATH, do, f'{do}summary_stats',
+    paths = [f'{ROOT_DIR}/Data/interim_output/{scenario}', GLOBAL_RASTER_PATH, CROPPED_RASTER_PATH, do, f'{do}summary_stats',
              f"{do}dendrogram_graph", f'{do}elbow_graph', f'{do}spatial_clustering']
     # Initialize output paths for data
     for output_path_raw in paths:
